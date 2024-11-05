@@ -1,12 +1,12 @@
 Package.describe({
-  name: 'peerlibrary:computed-field',
+  name: 'mrspark:computed-field',
   summary: "Reactively computed field for Meteor",
-  version: '0.10.0',
+  version: '1.0.0',
   git: 'https://github.com/peerlibrary/meteor-computed-field.git'
 });
 
 Package.onUse(function (api) {
-  api.versionsFrom('METEOR@1.8.1');
+  api.versionsFrom('3.0.4');
 
   // Core dependencies.
   api.use([
@@ -17,7 +17,7 @@ Package.onUse(function (api) {
   ]);
 
   api.use([
-    'blaze@2.3.3'
+    'blaze@3.0.0'
   ], {weak: true});
 
   api.export('ComputedField');
@@ -26,16 +26,16 @@ Package.onUse(function (api) {
 });
 
 Package.onTest(function (api) {
-  api.versionsFrom('METEOR@1.8.1');
+  api.versionsFrom('3.0.4');
 
   // Core dependencies.
   api.use([
-    'coffeescript@2.4.1',
+    'coffeescript',
     'ecmascript',
     'tracker',
     'reactive-var',
     'templating',
-    'blaze@2.2.1',
+    'blaze@3.0.0',
     'spacebars',
     'underscore',
     'jquery'
@@ -43,7 +43,7 @@ Package.onTest(function (api) {
 
   // Internal dependencies.
   api.use([
-    'peerlibrary:computed-field'
+    'mrspark:computed-field'
   ]);
 
   // 3rd party dependencies.
